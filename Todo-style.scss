@@ -1,2 +1,182 @@
 @import "_component.scss";
 
+//////?start base 
+body{
+   font-family: alkatra;
+   background: $bg-color;
+}
+
+*{
+   font-family: alkatra;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+}
+//////?end base 
+
+
+//////?grid page
+.-container{
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   grid-template-rows: repeat(5,1fr);
+   .content{
+      grid-area: 1 / 1 / 6 / 5;
+      @include container();
+   }
+   aside{
+      grid-area: 1 / 5 / 6 / 6;
+   }
+}
+//////?grid page
+
+
+//////?start header
+header{
+   color: whitesmoke;
+   margin-bottom: $margin-bottom;
+   h1{
+      font-size: 2.5em;
+      font-weight: 900;
+      line-height: 1.6;
+      span{
+         color: $primary-color;
+         font-weight: 1000;
+      }
+   }
+}
+//////?end header
+
+
+//////?start main
+
+////?create task input
+form{
+   margin-bottom: $margin-bottom;
+   div{
+      width: 100%;
+      background: white;
+      border-radius: $border-radius;
+      padding: 3px 3px;
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+input{
+   width: 90%;
+   height: 7%;
+   padding: 9px;
+   border-radius: $border-radius;
+   align-self: center;
+}
+
+.addbtn{
+   @include btn-design(rgb(250, 122, 122) , red);
+   font-size: 25px;
+   background: none;
+   padding: 3px 13px;
+   border-radius: $border-radius;
+   height: 7%;
+   align-self: center;
+   cursor: pointer;
+   i{
+      text-align: center;
+   }
+}
+
+////?task bar
+ul li{
+   display: flex;
+   justify-content: space-between;
+   background: rgb(160, 132, 220);
+   color: white;
+   padding: 9px 15px;
+   width: 95%;
+   margin: auto;
+   border-radius: $border-radius;
+   margin-bottom: 2%;
+   transition: all .7s ease;
+   &:hover{
+      width: 100%;
+      background: $primary-color;
+   }
+   .trashbtn{
+      @include btn-design(white , red);
+         margin-right: 6px;
+      i{
+         font-size: 25px;
+      }
+   }
+   .compeletebtn{
+      @include btn-design(white , rgb(199, 179, 45));
+      i{
+         font-size: 25px;
+      }
+   }
+}
+
+//////?end main
+
+
+//////?start sidebar
+aside{
+   border: 1px solid white;
+   border-top-left-radius: 60px;
+   background: white;
+   padding: 20px;
+   text-align: center;
+}
+.account{
+   padding: 15px;
+   border-bottom: 3px solid $primary-color;
+   img{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+   }
+   h4{
+      color: $primary-color;
+   }
+   p{
+      color: $secondry-color;
+   }
+}
+.Fliter-ToDo{
+   padding: 30px 15px;
+   .select{
+      background: $secondry-color;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      padding: 9px;
+      border-radius: $border-radius;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

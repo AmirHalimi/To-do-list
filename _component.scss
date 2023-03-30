@@ -1,0 +1,30 @@
+//////?variables
+//colors
+$primary-color: rgb(100, 92, 187);
+$bg-color: rgb(191, 172, 226);
+$secondry-color: rgb(235, 199, 230);
+//other
+$margin-bottom: 7%;
+$border-radius: 15px;
+
+
+
+//////?mixin
+@mixin container(){
+   padding: 7% 13% 7% 13%;
+}
+
+@mixin btn-design($default-color , $hover-color){
+   background: none;
+   color: $default-color;
+   &:hover{
+      color: $hover-color;
+   }
+}
+
+
+////!compelete class
+.Compeleted{
+   color: $secondry-color;
+   opacity: .4;
+} 

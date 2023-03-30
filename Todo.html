@@ -4,14 +4,56 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/Todo-style.css">
    <title>To Do list</title>
 </head>
 <body>
-   <header></header>
-   <aside>
-
-   </aside>
-   <main></main>
+   <div class="-container">
+      <div class="content">
+         <header>
+            <h1>
+               change
+               <span>lifesyle</span>
+               and <span>Future</span>
+               <br>
+               with your Mindset with this To Do
+            </h1>
+         </header>
+         <main>
+            <form>
+               <div>
+                     <input class="todo-input" type="text" placeholder="inter task...">
+                     <button class="addbtn">
+                        <i class="addbtn fa fa-plus-circle"></i>
+                     </button>
+               </div>
+            </form>
+            <ul class="todo-list"></ul>
+         </main>
+      </div>
+      <aside>
+         <div class="account">
+            <img src="images.jfif" alt="prof">
+            <div>
+               <h4>Amir Halimi</h4>
+               <p>jounior frontend dev</p>
+            </div>
+         </div>
+         <div>
+            <div class="Fliter-ToDo">
+               <select class="select" name="Fliter">
+                  <option class="opt-all">All</option>
+                  <option class="opt-Compeleted">Compeleted</option>
+                  <option class="opt-Uncompeleted">Uncompeleted</option>
+               </select>
+            </div>
+         </div>
+      </aside>
+   </div>
+   <script src="Todo.js"></script>
 </body>
 </html>
